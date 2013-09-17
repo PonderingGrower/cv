@@ -1,3 +1,4 @@
+# Automatyczna kompilacja CV
 SRC=$(wildcard *.tex)
 OBJS=$(SRC:.tex=.pdf)
 
