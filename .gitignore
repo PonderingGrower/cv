@@ -1,5 +1,6 @@
 *.aux
 *.log
+*.dvi
 *.out
 *.pdf
 *.fdb_latexmk
