@@ -1,4 +1,6 @@
 FILES=cv_pl.tex cv_en.tex
+LATEXMK=latexmk -pdf
+TARGETS=cv_pl.pdf cv_en.pdf
 
 deps:
 	sudo apt install \
@@ -10,5 +12,7 @@ deps:
 clean:
 	rm -f *.log *.dvi *.aux *.fls *.fdb_latexmk *.out *.pdf
 
-all:
-	latexmk ${FILES}
+%.pdf: %.tex
+	$(LATEXMK) $<
+
+all: $(TARGETS)
