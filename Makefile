@@ -15,4 +15,7 @@ clean:
 %.pdf: %.tex
 	$(LATEXMK) $<
 
-all: $(TARGETS)
+rename:
+	 rename -f 's/.*_(en|pl).pdf/Jakub Sokolowski CV ($$1).pdf/' *.pdf
+
+all: $(TARGETS) rename
