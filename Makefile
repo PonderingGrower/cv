@@ -18,4 +18,8 @@ clean:
 rename:
 	 rename -f 's/.*_(en|pl).pdf/Jakub Sokolowski CV ($$1).pdf/' *.pdf
 
+upload: cv_en.pdf cv_pl.pdf
+	scp cv_en.pdf gsokolowski.pl:/var/www/files/jakub_sokolowski_cv_en.pdf
+	scp cv_pl.pdf gsokolowski.pl:/var/www/files/jakub_sokolowski_cv_pl.pdf
+
 all: $(TARGETS) rename
